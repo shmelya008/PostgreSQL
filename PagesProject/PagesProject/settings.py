@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'PagesProject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'pages_db',
+        'NAME': 'postgres',
         'USER': 'postgres',
         'PASSWORD': '0000',
         'HOST': '127.0.0.1',

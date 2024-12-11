@@ -7,7 +7,7 @@ from .models import Post
 
 
 def posts_list(request):
-    posts = Post.objects.all()
+    posts = Post.objects.filter(status='published')
 
     # Получаем количество статей на странице из GET-параметров, по умолчанию 5
     posts_per_page = request.GET.get('posts_per_page', 5)

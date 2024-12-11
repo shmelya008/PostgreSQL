@@ -28,3 +28,17 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class Author(models.Model):
+    id = models.IntegerField(primary_key=True)
+    name = models.CharField(max_length=30)
+    phone_number = models.CharField(null=True, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    objects = models.Manager()
+    DoesNotExist = models.Manager
+
+    def __str__(self):
+        return self.name
+
